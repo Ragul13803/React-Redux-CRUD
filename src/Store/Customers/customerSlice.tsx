@@ -27,7 +27,7 @@ const customerSlice = createSlice({
     deleteCustomer(state, action: PayloadAction<string>) {
       const deleteIndex = action.payload;
       console.log('deleteIndex',deleteIndex);
-      return state.filter((val, index: any) =>  index !== deleteIndex)
+      return state.filter((index: any) =>  index !== deleteIndex)
     },
     updateCustomer(state, action: PayloadAction<{ index: number; customer: Customer }>) {
       const { index, customer } = action.payload;
